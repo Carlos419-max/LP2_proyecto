@@ -1,0 +1,116 @@
+* { box-sizing: border-box; }
+
+body { font-family: Arial, Helvetica, sans-serif; color: #2E3440;
+       background: #F4F6FB; margin: 0; line-height: 1.5; }
+
+.cabecera { background: #1B2B6B; color: #FFFFFF; padding: 1rem 1.5rem; }
+.cabecera h1 { margin: 0; font-size: 1.5rem; }
+.lema { margin: .25rem 0 0; color: #C8D2EE; font-size: .9rem; }
+
+.menu { display: flex; gap: 1.5rem; background: #FFFFFF;
+        padding: .75rem 1.5rem; border-bottom: 2px solid #D3DAEA; }
+.menu a { color: #1B2B6B; text-decoration: none; font-weight: bold; cursor: pointer; }
+.menu a:hover { color: #F7941D; }
+.menu .activo { border-bottom: 3px solid #F7941D; }
+.menu a.deshabilitado { color: #A0A0A0; cursor: not-allowed; opacity: 0.6; }
+.menu a.deshabilitado:hover { color: #A0A0A0; border-bottom: none; }
+
+.contenedor { max-width: 60rem; margin: 1.5rem auto; padding: 1.5rem;
+              background: #FFFFFF; border: 1px solid #D3DAEA;
+              border-radius: 6px; }
+h2 { color: #1B2B6B; margin-top: 0; }
+
+.formulario { display: flex; flex-wrap: wrap; gap: 1rem; }
+.campo { display: flex; flex-direction: column; width: 48%; }
+.campo.ancho-total { width: 100%; }
+label { font-weight: bold; color: #1B2B6B; margin-bottom: .25rem; }
+
+input, select { padding: .5rem; border: 1px solid #D3DAEA;
+                border-radius: 4px; font-size: 1rem; }
+input:focus, select:focus { outline: 2px solid #F7941D; }
+input:invalid { border-color: #F7941D; }
+
+.btn { background: #1B2B6B; color: #FFFFFF; border: 0;
+       padding: .7rem 1.6rem; border-radius: 4px; cursor: pointer; }
+.btn:hover { background: #F7941D; }
+
+.pie { background: #1B2B6B; color: #C8D2EE; padding: 1rem 1.5rem;
+       font-size: .85rem; }
+
+/* Estilos simples para la sección de Armado de Pedido (Laboratorio 03) */
+#buscar {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tarjeta {
+  background: #FFFFFF;
+  border: 1px solid #D3DAEA;
+  border-radius: 6px;
+  padding: 1rem;
+  width: calc(50% - 0.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tarjeta input[type="number"] {
+  width: 5rem;
+}
+
+.tarjeta button {
+  background: #1B2B6B;
+  color: #FFFFFF;
+  border: 0;
+  padding: .4rem .9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: .5rem;
+}
+
+.tarjeta button:hover {
+  background: #F7941D;
+}
+
+.resumen {
+  background: #F4F6FB;
+  border: 1px solid #D3DAEA;
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.resumen p {
+  margin: .4rem 0;
+}
+
+.resumen button {
+  background: #1B2B6B;
+  color: #FFFFFF;
+  border: 0;
+  padding: .4rem .9rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.resumen button:hover:not(:disabled) {
+  background: #F7941D;
+}
+
+.resumen button:disabled {
+  background: #A0A0A0;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Clases de estado (Laboratorio 03) */
+.stock-critico { background: #FDE7C7; border-color: #F7941D; }
+.error { color: #A8300A; font-weight: bold; margin-top: .5rem; }
+.oculto { display: none !important; }
